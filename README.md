@@ -26,3 +26,5 @@ Supervisor 1: Ing. Dominik Denner MSc
 Supervisor 2: Degree First Name Surname, Degree 
 
 Wien, Austria, 20.09.2022 
+
+GLOBOT URL: http://cloud-connect.atspace.cc/app.html
