@@ -28,7 +28,21 @@ function speak(message) {
 
   const messageInput = document.getElementById('message-input'); 
 
-const networkTypeText = document.getElementById('network-type-text');
+  const networkTypeText = document.getElementById('network-type-text');
+
+const form = document.getElementById('form-popup');
+
+// sidebar menu-icon
+
+ const menuIcon = document.getElementById('menu-icon');
+
+ const sidebar = document.getElementById('sidebar');
+
+//clear chat history
+
+const clearHistoryButton = document.getElementById('clear-history');
+
+const logoutButton = document.getElementById('logout');
 
   
 
@@ -288,7 +302,25 @@ const networkTypeText = document.getElementById('network-type-text');
 
   // If no matching keyword is found, send default response
 
-  sendMessage('I\'m sorry, I am unable to answer that question.kindly,contact our customer services:https://www.gloworld.com/ng/business) or check your internet connection', false);
+ sendMessage('I\'m sorry, I am unable to answer that question.kindly,contact our customer service', false);
+
+const form = document.getElementById("form-popup").style.display = "block";
+
+  
+
+var closeIcon = document.getElementsByClassName("close-icon")[0];
+
+  closeIcon.onclick = function() {
+
+  document.getElementById("form-popup").style.display = "none";
+
+  
+
+  }
+
+  
+
+sendMessage(form)
 
   };
 
@@ -326,11 +358,7 @@ const networkTypeText = document.getElementById('network-type-text');
 
   
 
-  //clear chat history
-
-  const clearHistoryButton = document.getElementById('clear-history');
-
-  const logoutButton = document.getElementById('logout');
+  
 
   
 
@@ -389,12 +417,6 @@ const networkTypeText = document.getElementById('network-type-text');
  
 
   
-
-  // sidebar menu-icon
-
-  const menuIcon = document.getElementById('menu-icon');
-
-  const sidebar = document.getElementById('sidebar');
 
   
 
