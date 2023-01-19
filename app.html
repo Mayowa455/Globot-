@@ -1,480 +1,240 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-
   <!-- Meta tags for description and keywords -->
-
   <meta name="description" content="Nigeria telecommunication chatbot ">
-
   <meta name="keywords" content="chatbot">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
   <title>Telecom Chatbot</title>
-
  <link rel="stylesheet" href="app.css">
-
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
  
 
+ <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
  
-
- 
-
  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
-
  <script type="text/javascript" src="https://unpkg.com/jso/dist/jso.js"></script>
-
- <script type="text/javascript">
-
- document.addEventListener("DOMContentLoaded", function(){
-
- document.getElementById("loading-spinner").style.display = "block";
-
- });
-
+ 
  </script>
-
 </head>
-
 <body>
 
-<div id="loading-spinner">
 
-    <div class="loadingio-spinner-spin-j8x2y2xlj1">
 
-        <div class="ldio-9s4k4s4v5xm">
 
-            <div></div>
 
-            <div></div>
 
-            <div></div>
 
-            <div></div>
 
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-            <div></div>
-
-        </div>
-
-    </div>
-
-</div>
 
   <div id="app">
-
     <div id="header">
-
    <div id="menu-icon" class="menu-icon">
-
    <i class="fa fa-ellipsis-v"></i>
-
    </div>
-
       <img src="glo.jpeg" alt="Chatbot logo" id="logo">
-
       <h1>GLOBOT</h1>
-
       
-
     </div>
-
     <aside id="sidebar">
-
     <ul id="sidebar-list">
-
     <li id="network-type">
-
     <i class="fa fa-globe"></i>
-
     Network: <span id="network-type-text">Loading...</span>
-
     </li>
-
+    <li id="customer-service">
+    <i class="fa fa-comment"></i>
+   <a href="http://cloud-connect.atspace.cc/form.html" style="text-decoration: none;color:green;" >Contact Customer Service</a>
+    </li>
     <li id="clear-history">
-
     <i class="fa fa-trash"></i>
-
     Clear Chat History
-
     </li>
-
     <li id="logout" >
-
     <i class="fa fa-sign-out-alt"></i>
-
     Logout
-
     </li>
-
     </ul>
-
     </aside>
-
     
-
     <div id="chat-window">
-
       <div id="messages">
-
         <!-- Messages will be displayed here -->
-
       </div>
-
       
-
       
-
       <form  id="message-form" action="submit.php" method="post" >
-
         <input type="text" id="message-input" name="chat"  placeholder="Enter your message...">  
-
        
-
         <button type="submit" class="fa fa-paper-plane">Send</button>
-
           
-
       </form>
-
     </div>
-
     
-
   </div>
 
- 
 
+ 
 <div id="form-popup" style="display:none;">
-
-  <div class="form-header">
-
+  <div class="card">
+  <span class="close-icon" style="color:white;float:right;" ><h2>X</h2></span>
   <h2>I' m sorry, I am unable to answer that question.kindly,contact our customer service</h2>
-
-    <span class="close-icon">X</span>
-
+    
   </div>
-
-  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="submit.php" method="post">
-
-  <fieldset id="fs-frm-inputs">
-
-  <label for="full-name">Full Name</label>
-
-  <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-
-  <label for="email-address">Email Address</label>
-
-  <input type="email" name="email" id="email-address" placeholder="email@domain.com" required="">
-
-  <label for="message">Message</label>
-
-  <textarea rows="5" name="message" id="message" placeholder="message....." required=""></textarea>
-
-  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-
-  </fieldset>
-
-  <input type="submit" value="Submit">
-
-  </form><style>/* reset */
-
-  #fs-frm input,
-
-  #fs-frm select,
-
-  #fs-frm textarea,
-
-  #fs-frm fieldset,
-
-  #fs-frm optgroup,
-
-  #fs-frm label,
-
-  #fs-frm #card-element:disabled {
-
-  font-family: inherit;
-
-  font-size: 100%;
-
-  color: inherit;
-
-  border: none;
-
-  border-radius: 0;
-
-  display: block;
-
-  width: 100%;
-
-  padding: 0;
-
-  margin: 0;
-
-  -webkit-appearance: none;
-
-  -moz-appearance: none;
-
-  }
-
-  #fs-frm label,
-
-  #fs-frm legend,
-
-  #fs-frm ::placeholder {
-
-  font-size: .825rem;
-
-  margin-bottom: .5rem;
-
-  padding-top: .2rem;
-
-  display: flex;
-
-  align-items: baseline;
-
-  }
-
+  <form class="card-form" id="consultation-form">
+  <div class="input">
+  <input type="text" id="name" class="input-field" name="name" required/>
+  <label for="name" class="input-label">Full name</label>
+  </div>
+    
+  <div class="input">
+  <input type="text" class="input-field" name="vlockn@gmail.com" required/>
+  <label for="input-label" class="input-label">Email</label>
+  </div>
+  <div class="input">
+  <input type="text" id="designation" class="input-field" name="designation">
+  <label for="designation" class="input-label">Message:</label>
+  </div>
+  <div class="input">
+  <input type="Date" id="date-time" name="date-time" class="input-field">
+  <label for="date" class="input-label">Date:</label>
+  </div>
+  <br>
+  <div class="input">
+  <input type="Time" id="date-time" name="date-time" class="input-field">
+  
+  <label for="time" class="input-label">Time:</label>
+  </div>
   
 
-  /* border, padding, margin, width */
-
-  #fs-frm input,
-
-  #fs-frm select,
-
-  #fs-frm textarea,
-
-  #fs-frm #card-element {
-
-  border: 1px solid rgba(0,0,0,0.2);
-
-  background-color: rgba(255,255,255,0.9);
-
-  padding: .75em 1rem;
-
-  margin-bottom: 1.5rem;
-
-  }
-
-  #fs-frm input:focus,
-
-  #fs-frm select:focus,
-
-  #fs-frm textarea:focus {
-
-  background-color: white;
-
-  outline-style: solid;
-
-  outline-width: thin;
-
-  outline-color: gray;
-
-  outline-offset: -1px;
-
-  }
-
-  #fs-frm [type="text"],
-
-  #fs-frm [type="email"] {
-
-  width: 100%;
-
-  }
-
-  #fs-frm [type="button"],
-
-  #fs-frm [type="submit"],
-
-  #fs-frm [type="reset"] {
-
-  width: auto;
-
-  cursor: pointer;
-
-  -webkit-appearance: button;
-
-  -moz-appearance: button;
-
-  appearance: button;
-
-  }
-
-  #fs-frm [type="button"]:focus,
-
-  #fs-frm [type="submit"]:focus,
-
-  #fs-frm [type="reset"]:focus {
-
-  outline: none;
-
-  }
-
-  #fs-frm [type="submit"],
-
-  #fs-frm [type="reset"] {
-
-  margin-bottom: 0;
-
-  }
-
-  #fs-frm select {
-
-  text-transform: none;
-
-  }
-
+  <div class="action">
+  <button class="action-button">send</button>
+  </div>
+  </form>
+  </div>
   
 
-  #fs-frm [type="checkbox"] {
-
-  -webkit-appearance: checkbox;
-
-  -moz-appearance: checkbox;
-
-  appearance: checkbox;
-
-  display: inline-block;
-
-  width: auto;
-
-  margin: 0 .5em 0 0 !important;
-
-  }
-
-  
-
-  #fs-frm [type="radio"] {
-
-  -webkit-appearance: radio;
-
-  -moz-appearance: radio;
-
-  appearance: radio;
-
-  }
-
-  
-
-  /* address, locale */
-
-  #fs-frm fieldset.locale input[name="city"],
-
-  #fs-frm fieldset.locale select[name="state"],
-
-  #fs-frm fieldset.locale input[name="postal-code"] {
-
-  display: inline;
-
-  }
-
-  #fs-frm fieldset.locale input[name="city"] {
-
-  width: 52%;
-
-  }
-
-  #fs-frm fieldset.locale select[name="state"],
-
-  #fs-frm fieldset.locale input[name="postal-code"] {
-
-  width: 20%;
-
-  }
-
-  #fs-frm fieldset.locale input[name="city"],
-
-  #fs-frm fieldset.locale select[name="state"] {
-
-  margin-right: 3%;
-
-  }
-
-  </style>
-
-</div>
+<style type="text/css">
+// iOS Reset 
+ .input {
+ appearance: none;
+ border-radius: 0;
+ }
+ 
+ .card {
+ margin: 2rem auto;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ max-width: 425px;
+ background-color:green;
+ border-radius: 10px;
+ box-shadow: 0 10px 20px 0 rgba(#999, .25);
+ padding: .75rem;
+ color:white;
+ }
+ 
+ .card-image {
+ border-radius: 8px;
+ overflow: hidden;
+ padding-bottom: 65%;
+ background-image: url('https://assets.codepen.io/285131/coffee_1.jpg');
+ background-repeat: no-repeat;
+ background-size: 150%;
+ background-position: 0 5%;
+ position: relative;
+ }
+ 
+ .card-heading {
+ 
+ color:green;
+ }
+ .card-form {
+ padding: 2rem 1rem 0;
+ 
+ }
+ 
+ .input {
+ display: flex;
+ flex-direction: column-reverse;
+ position: relative;
+ padding-top: 1.5rem;
+ &+.input {
+ margin-top: 1.5rem;
+ font-color:white;
+ }
+ }
+ 
+ .input-label {
+ color: #8597a3;
+ position: absolute;
+ top: 1.5rem;
+ transition: .25s ease;
+ }
+ 
+ .input-field {
+ 
+ border: 0;
+ z-index: 1;
+ background-color: transparent;
+ border-bottom: 2px solid #eee; 
+ font: inherit;
+ font-size: 1.125rem;
+ font-color:white;
+ padding: .25rem 0;
+ &:focus, &:valid {
+ outline: 0;
+ border-bottom-color: #6658d3;
+ &+.input-label {
+ font-color: white;
+ transform: translateY(-1.5rem);
+ }
+ }
+ }
+ 
+ 
+ .card-info {
+ padding: 1rem 1rem;
+ text-align: center;
+ font-size: .875rem;
+ color: #8597a3;
+ a {
+ display: block;
+ color: #6658d3;
+ text-decoration: none;
+ }
+ }
+ 
+ .action {
+ margin-top: 2rem;
+ }
+ 
+ .action-button {
+ font: inherit;
+ font-size: 1.25rem;
+ padding: 1em;
+ width: 100%;
+ font-weight: 500;
+ background-color: green;
+ border-radius: 6px;
+ color: #FFF;
+ border: 0;
+ &:focus {
+ outline: 0;
+ }
+ }
+</style>
 
  
-
- <?php
-
- include('Globot form.php');
-
- ?>
-
- <
-
  
-
   <script src="main.js"></script>
-
   <script src="Questions andanswers.js"></script>
-
   <script src="forms.js"></script>
-
   
 
-<script type="text/javascript">
 
-document.addEventListener("DOMContentLoaded", function(){
-
-    // your javascript code here
-
-    
-
-    if(document.getElementById("loading-spinner")){
-
-    document.getElementById("loading-spinner").style.display = "block";
-
-    }
-
-    
-
-    setTimeout(function(){
-
-    if(document.getElementById("loading-spinner")){
-
-    document.getElementById("loading-spinner").style.display = "block";
-
-    }
-
-    }, 200);
-
-    
-
-   
-
-  
-
-    
-
-});
-
-</script>
 
 </body>
-
 </html>
-
