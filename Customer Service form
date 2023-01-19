@@ -272,7 +272,7 @@
 
       <img src="glo.jpeg" alt="Chatbot logo" id="logo">
 
-      <h1>GLOBOT</h1>
+      <h1>CUSTOMER SERVICE</h1>
 
       
 
@@ -404,7 +404,19 @@
 
   
 
-  
+  document.getElementById("consultation-form").addEventListener("submit", function(event){
+
+  event.preventDefault(); // prevent form from submitting
+
+  var confirmation = confirm("Thanks for using Glo service. your message is successfully sent.our custormer service will reply to you soon!");
+
+  if (confirmation) {
+
+  this.submit(); // submit form if user confirms
+
+  }
+
+  });
 
   
 
